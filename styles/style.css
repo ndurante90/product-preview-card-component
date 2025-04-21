@@ -15,7 +15,7 @@ body{
 
 main.perfume-card{
     background-color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 80px;
     width: 21.88rem;
     margin-left: auto;
     margin-right: auto;
@@ -25,6 +25,7 @@ main.perfume-card{
 .perfume-image-container{
     width: 100%;
     height: 21.3rem;
+    position: relative;
 }
 
 .perfume-image-container img{
@@ -46,7 +47,6 @@ main.perfume-card{
     color: #6C7289;
     text-transform: uppercase;
     letter-spacing: 5px;
-    line-height: 120%;
 }
 
 .perfume-description h1{
@@ -55,15 +55,16 @@ main.perfume-card{
    font-size: 2rem;
    margin-top: 1.5rem;
    margin-bottom: 1.5rem;
+   line-height: 1;
 }
 
 .perfume-description p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 0.875rem;
-    line-height: 160%;
     color: #6C7289;
     max-width: 17.88rem;
+    line-height: 1.42;
 }
 
 .price{
@@ -116,6 +117,16 @@ span.cart-btn:hover{
     margin-right: 10px;
 }
 
+.perfume-image-container::before{
+    content: "";
+    width: 100%;
+    height: 21.3rem;
+    background-color: #000000;
+    opacity: 0.25;
+    display: block;
+    position: absolute;
+}
+
 @media screen and (min-width: 48rem) {
     body{
         display: flex;
@@ -132,6 +143,10 @@ span.cart-btn:hover{
     }
 
     .perfume-image-container{
+        height: 100%;
+    }
+
+    .perfume-image-container::before{
         height: 100%;
     }
 
